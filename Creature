@@ -1,0 +1,17 @@
+package simulation.entities.creatures;
+
+import simulation.entities.Entity;
+import simulation.MapWorld;
+
+public abstract class Creature extends Entity{
+    protected int hp;
+    protected int speed;
+    
+    public Creature(int x, int y, int hp, int speed){
+        super(x, y);
+        this.hp = hp;
+        this.speed = speed;
+    }
+    
+    public abstract void makeMove(MapWorld map);
+}
